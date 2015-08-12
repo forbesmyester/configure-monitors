@@ -32,7 +32,7 @@ describe('index', function() {
         expect(index.unbin(['a', 'b', 'c'], 5)).to.eql(['c', 'a']);
     });
 
-    it('can get the max permissable number', function() {
+    it('can get the next permissable number', function() {
         expect(index.next(['a', 'b', 'c'], ['b', 'c'])).to.eql(['a']);
         expect(index.next(['a', 'b', 'c'], ['a', 'b'])).to.eql(['a', 'b', 'c']);
         expect(index.next(['a', 'b', 'c'], ['a', 'b', 'c'])).to.eql(['c']);
